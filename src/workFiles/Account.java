@@ -1,27 +1,18 @@
 package workFiles;
 
-public class Account <I, B> {
-    private B balance;
-    private I id;
-   public Account(I id , B balance)
+public class Account <T> {
+    private T id;
+   public Account(T id )
    {
        this.id = id;
-       this.balance = balance;
    }
 
-    public void setId(I id) {
+    public void setId(T id) {
         this.id = id;
     }
 
-    public void setBalance(B balance) {
-        this.balance = balance;
-    }
 
-    public B getBalance() {
-        return balance;
-    }
-
-    public I getId() {
+    public T getId() {
         return id;
     }
 
