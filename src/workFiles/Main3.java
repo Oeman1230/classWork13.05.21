@@ -13,11 +13,18 @@ public class Main3 {
         String id2 = account2.getId();
         System.out.println(id2);
          */
-       String[] strings = {"a", "b", "c", "d"};
-       Integer[] integers = {1,2,3,4};
-       Printer printer = new Printer();
-       printer.<String>print(strings);
-       printer.<Integer>print(integers);
+    /* Account<Integer, Integer> account = new Account<Integer, Integer>(1, 1231243);
+     Integer balance = account.getBalance();
+     Integer id = account.getId();
+     System.out.println(id+ " " + balance);
+    }
 
+     */
+        NewAccount2 account1 = new NewAccount2("1", 555);
+        NewAccount2 account2 = new NewAccount2("2", 333);
+        Transaction<NewAccount2> transaction = new Transaction<>(account1, account2, 228);
+        transaction.execute();
+        Transaction<NewAccount2> transaction2 = new Transaction<>(account2, account1, 331);
+        transaction2.execute();
     }
 }
